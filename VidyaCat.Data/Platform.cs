@@ -24,16 +24,16 @@ namespace VidyaCat.Data
         Other
     }
 
-    public class Console
+    public class Platform
     {
         [Key]
-        public int ConsoleID { get; set; }
+        public int PlatformID { get; set; }
 
         [Required]
         public Brand Brand { get; set; }
 
         [Required]
-        public string ConsoleName { get; set; }
+        public string PlatformName { get; set; }
 
         [Required]
         public DateTime ReleaseYear { get; set; }

@@ -94,15 +94,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Console.cs" />
+    <Compile Include="Migrations\202104140024367_TestingMigrations.cs" />
+    <Compile Include="Migrations\202104140024367_TestingMigrations.designer.cs">
+      <DependentUpon>202104140024367_TestingMigrations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Platform.cs" />
     <Compile Include="Developer.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202104132216165_InitialMigration.cs" />
-    <Compile Include="Migrations\202104132216165_InitialMigration.Designer.cs">
-      <DependentUpon>202104132216165_InitialMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -110,8 +110,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202104132216165_InitialMigration.resx">
-      <DependentUpon>202104132216165_InitialMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202104140024367_TestingMigrations.resx">
+      <DependentUpon>202104140024367_TestingMigrations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

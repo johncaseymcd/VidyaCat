@@ -91,7 +91,7 @@ namespace VidyaCat.Data
         public Subgenre SecondSubgenre { get; set; }
         public Subgenre ThirdSubgenre { get; set; }
 
-        public virtual List<Console> Consoles { get; set; } = new List<Console>();
+        public virtual List<Platform> Consoles { get; set; } = new List<Platform>();
 
         [ForeignKey(nameof(Developer))]
         public int DeveloperID { get; set; }

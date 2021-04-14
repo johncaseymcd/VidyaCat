@@ -32,6 +32,6 @@ namespace VidyaCat.Data
 
         public DbSet<Game> Games { get; set; }
         public DbSet<Developer> Developers { get; set; }
-        public DbSet<Console> Consoles { get; set; }
+        public DbSet<Platform> Platforms { get; set; }
     }
 }
