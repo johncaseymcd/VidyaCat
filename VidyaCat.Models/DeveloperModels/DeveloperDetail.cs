@@ -21,6 +21,6 @@ namespace VidyaCat.Models.DeveloperModels
         public bool IsActive { get; set; }
 
         [Display(Name = "Games Developed")]
-        public string GamesDeveloped { get; set; }
+        public List<string> GamesDeveloped { get; set; }
     }
 }

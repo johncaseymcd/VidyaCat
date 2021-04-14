@@ -38,6 +38,14 @@ namespace VidyaCat.Data
         [Required]
         public DateTime ReleaseYear { get; set; }
 
-        public bool IsCurrent { get; set; }
+        public bool IsCurrent
+        {
+            get
+            {
+                return (DateTime.Now.Year - ReleaseYear.Year) <= 5;
+            }
+
+            set { }
+        }
     }
 }
