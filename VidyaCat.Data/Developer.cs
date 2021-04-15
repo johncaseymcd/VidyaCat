@@ -30,5 +30,23 @@ namespace VidyaCat.Data
 
         public bool IsMajor { get; set; }
         public bool IsActive { get; set; }
+
+        public string Type
+        {
+            get
+            {
+                if (!IsMajor) return "Indie";
+                return "Major";
+            }
+        }
+
+        public string Status
+        {
+            get
+            {
+                if (!IsActive) return "Inactive";
+                return "Active";
+            }
+        }
     }
 }

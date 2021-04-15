@@ -11,7 +11,7 @@ namespace VidyaCat.Models.DeveloperModels
     public class DeveloperListItem
     {
         public int DeveloperID { get; set; }
-        public string Name { get; set; }
+        public string DeveloperName { get; set; }
         public Region Region { get; set; }
 
         [Display(Name = "Currently Active?")]

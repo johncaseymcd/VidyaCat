@@ -70,7 +70,7 @@ namespace VidyaCat.Services
             {
                 var entity =
                     ctx.Games
-                    .Single(g => g.GameID == gameID);
+                    .Find(gameID);
 
                 return new GameDetail
                 {
@@ -207,7 +207,7 @@ namespace VidyaCat.Services
 
                 var entity =
                     ctx.Games
-                    .Single(g => g.GameID == model.GameID);
+                    .Find(model.GameID);
 
                 entity.Title = model.Title;
                 entity.ReleaseDate = model.ReleaseDate;
