@@ -79,10 +79,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeveloperModels\DeveloperCreate.cs" />
+    <Compile Include="DeveloperModels\DeveloperDetail.cs" />
+    <Compile Include="DeveloperModels\DeveloperEdit.cs" />
+    <Compile Include="DeveloperModels\DeveloperListItem.cs" />
     <Compile Include="GameModels\GameCreate.cs" />
     <Compile Include="GameModels\GameDetail.cs" />
     <Compile Include="GameModels\GameEdit.cs" />
     <Compile Include="GameModels\GameListItem.cs" />
+    <Compile Include="PlatformModels\PlatformCreate.cs" />
+    <Compile Include="PlatformModels\PlatformDetail.cs" />
+    <Compile Include="PlatformModels\PlatformEdit.cs" />
+    <Compile Include="PlatformModels\PlatformListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

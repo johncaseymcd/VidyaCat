@@ -78,11 +78,14 @@ namespace VidyaCat.Data
         [Key]
         public int GameID { get; set; }
 
+        //[Required]
+        //public Guid UserID { get; set; }
+
         [Required]
         public string Title { get; set; }
 
         [Required]
-        public DateTime ReleaseYear { get; set; }
+        public DateTime ReleaseDate { get; set; }
 
         [Required]
         public Genre Genre { get; set; }
@@ -91,7 +94,7 @@ namespace VidyaCat.Data
         public Subgenre SecondSubgenre { get; set; }
         public Subgenre ThirdSubgenre { get; set; }
 
-        public virtual List<Platform> Consoles { get; set; } = new List<Platform>();
+        public virtual List<Platform> Platforms { get; set; } = new List<Platform>();
 
         [ForeignKey(nameof(Developer))]
         public int DeveloperID { get; set; }
