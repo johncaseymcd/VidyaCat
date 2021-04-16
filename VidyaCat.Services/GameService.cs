@@ -197,7 +197,7 @@ namespace VidyaCat.Services
                             PlatformID = p.PlatformID,
                             Brand = p.Brand,
                             PlatformName = p.PlatformName,
-                            ReleaseYear = p.ReleaseYear
+                            ReleaseDate = p.ReleaseDate
                         }
                     );
 

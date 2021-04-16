@@ -12,6 +12,6 @@ namespace VidyaCat.Models.PlatformModels
         public int PlatformID { get; set; }
         public Brand Brand { get; set; }
         public string PlatformName { get; set; }
-        public DateTime ReleaseYear { get; set; }
+        public DateTime ReleaseDate { get; set; }
     }
 }

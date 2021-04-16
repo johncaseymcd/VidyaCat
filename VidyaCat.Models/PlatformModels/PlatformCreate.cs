@@ -19,6 +19,6 @@ namespace VidyaCat.Models.PlatformModels
         public string PlatformName { get; set; }
 
         [Required]
-        public DateTime ReleaseYear { get; set; }
+        public DateTime ReleaseDate { get; set; }
     }
 }

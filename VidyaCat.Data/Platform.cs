@@ -36,16 +36,25 @@ namespace VidyaCat.Data
         public string PlatformName { get; set; }
 
         [Required]
-        public DateTime ReleaseYear { get; set; }
+        public DateTime ReleaseDate { get; set; }
 
         public bool IsCurrent
         {
             get
             {
-                return (DateTime.Now.Year - ReleaseYear.Year) <= 5;
+                return (DateTime.Now.Year - ReleaseDate.Year) <= 10;
             }
 
             set { }
+        }
+
+        public string Status
+        {
+            get
+            {
+                if (!IsCurrent) return "Retro";
+                return "Current";
+            }
         }
     }
 }

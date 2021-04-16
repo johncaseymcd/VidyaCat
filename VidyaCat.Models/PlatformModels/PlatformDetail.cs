@@ -12,7 +12,7 @@ namespace VidyaCat.Models.PlatformModels
         public int PlatformID { get; set; }
         public Brand Brand { get; set; }
         public string PlatformName { get; set; }
-        public DateTime ReleaseYear { get; set; }
+        public DateTime ReleaseDate { get; set; }
         public bool IsCurrent { get; set; }
         public List<string> GamesOnPlatform { get; set; }
     }
