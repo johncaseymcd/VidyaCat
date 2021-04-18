@@ -98,6 +98,14 @@
     <Compile Include="Migrations\202104140024367_TestingMigrations.designer.cs">
       <DependentUpon>202104140024367_TestingMigrations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104180019121_AddedUserRoles.cs" />
+    <Compile Include="Migrations\202104180019121_AddedUserRoles.designer.cs">
+      <DependentUpon>202104180019121_AddedUserRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104180047501_RoleUpdate.cs" />
+    <Compile Include="Migrations\202104180047501_RoleUpdate.designer.cs">
+      <DependentUpon>202104180047501_RoleUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Platform.cs" />
     <Compile Include="Developer.cs" />
@@ -112,6 +120,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202104140024367_TestingMigrations.resx">
       <DependentUpon>202104140024367_TestingMigrations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104180019121_AddedUserRoles.resx">
+      <DependentUpon>202104180019121_AddedUserRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104180047501_RoleUpdate.resx">
+      <DependentUpon>202104180047501_RoleUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
