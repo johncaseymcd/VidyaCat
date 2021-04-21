@@ -12,11 +12,11 @@ namespace VidyaCat.Models.GameModels
         public int GameID { get; set; }
         public string Title { get; set; }
         public DateTime ReleaseDate { get; set; }
-        public string Genre { get; set; }
-        public string FirstSubgenre { get; set; }
-        public string SecondSubgenre { get; set; }
-        public string ThirdSubgenre { get; set; }
-        public string Platforms { get; set; }
+        public Genre Genre { get; set; }
+        public Subgenre FirstSubgenre { get; set; }
+        public Subgenre SecondSubgenre { get; set; }
+        public Subgenre ThirdSubgenre { get; set; }
+        public string PlatformNames { get; set; }
         public string DeveloperName { get; set; }
     }
 }

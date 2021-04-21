@@ -11,12 +11,12 @@ namespace VidyaCat.Services
 {
     public class GameService
     {
-        //private readonly Guid _userID;
+        private readonly Guid _userID;
 
-        //public GameService(Guid userID)
-        //{ 
-        //    _userID = userID;
-        //}
+        public GameService(Guid userID)
+        { 
+            _userID = userID;
+        }
 
         public bool CreateGame(GameCreate model)
         {
@@ -77,12 +77,12 @@ namespace VidyaCat.Services
                     GameID = entity.GameID,
                     Title = entity.Title,
                     ReleaseDate = entity.ReleaseDate,
-                    Genre = Enum.GetName(typeof(Genre), entity.Genre.GetHashCode()),
-                    FirstSubgenre = Enum.GetName(typeof(Subgenre), entity.FirstSubgenre.GetHashCode()),
-                    SecondSubgenre = Enum.GetName(typeof(Subgenre), entity.SecondSubgenre.GetHashCode()),
-                    ThirdSubgenre = Enum.GetName(typeof(Subgenre), entity.ThirdSubgenre.GetHashCode()),
+                    Genre = entity.Genre,
+                    FirstSubgenre = entity.FirstSubgenre,
+                    SecondSubgenre = entity.SecondSubgenre,
+                    ThirdSubgenre = entity.ThirdSubgenre,
                     DeveloperName = entity.Developer.DeveloperName,
-                    Platforms = entity.Platforms.ToString()
+                    PlatformNames = entity.Platforms.ToString()
                 };
             }
         }
