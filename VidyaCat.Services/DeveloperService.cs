@@ -10,6 +10,13 @@ namespace VidyaCat.Services
 {
     public class DeveloperService
     {
+        private readonly Guid _userID;
+
+        public DeveloperService(Guid userID)
+        {
+            _userID = userID;
+        }
+
         public bool CreateDeveloper(DeveloperCreate model)
         {
             var entity =
