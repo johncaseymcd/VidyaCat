@@ -10,6 +10,13 @@ namespace VidyaCat.Services
 {
     public class PlatformService
     {
+        private readonly Guid _userID;
+
+        public PlatformService(Guid userID)
+        {
+            _userID = userID;
+        }
+
         public bool CreatePlatform(PlatformCreate model)
         {
             var entity =

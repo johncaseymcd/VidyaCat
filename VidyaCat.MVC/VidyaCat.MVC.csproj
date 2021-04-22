@@ -213,6 +213,7 @@
     <Compile Include="Controllers\GameController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PlatformController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -392,6 +393,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Views\Developer\" />
     <Folder Include="Views\Game\" />
+    <Folder Include="Views\Platform\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
