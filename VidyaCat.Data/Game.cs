@@ -78,9 +78,6 @@ namespace VidyaCat.Data
         [Key]
         public int GameID { get; set; }
 
-        //[Required]
-        //public Guid UserID { get; set; }
-
         [Required]
         public string Title { get; set; }
 

@@ -388,12 +388,34 @@
     <Content Include="Views\Role\Edit.cshtml" />
     <Content Include="Views\Role\Details.cshtml" />
     <Content Include="Views\Role\Delete.cshtml" />
+    <Content Include="Views\Game\Index.cshtml" />
+    <Content Include="Views\Game\Create.cshtml" />
+    <Content Include="Views\Game\Details.cshtml" />
+    <Content Include="Views\Game\IndexByDeveloper.cshtml" />
+    <Content Include="Views\Game\IndexByPlatform.cshtml" />
+    <Content Include="Views\Game\IndexByReleaseYear.cshtml" />
+    <Content Include="Views\Game\IndexByGenre.cshtml" />
+    <Content Include="Views\Game\Edit.cshtml" />
+    <Content Include="Views\Game\Delete.cshtml" />
+    <Content Include="Views\Developer\Index.cshtml" />
+    <Content Include="Views\Developer\Create.cshtml" />
+    <Content Include="Views\Developer\Details.cshtml" />
+    <Content Include="Views\Developer\IndexByRegion.cshtml" />
+    <Content Include="Views\Developer\IndexByStatus.cshtml" />
+    <Content Include="Views\Developer\IndexByType.cshtml" />
+    <Content Include="Views\Developer\Edit.cshtml" />
+    <Content Include="Views\Developer\Delete.cshtml" />
+    <Content Include="Views\Platform\Index.cshtml" />
+    <Content Include="Views\Platform\Create.cshtml" />
+    <Content Include="Views\Platform\Details.cshtml" />
+    <Content Include="Views\Platform\IndexByYear.cshtml" />
+    <Content Include="Views\Platform\IndexByBrand.cshtml" />
+    <Content Include="Views\Platform\IndexByStatus.cshtml" />
+    <Content Include="Views\Platform\Edit.cshtml" />
+    <Content Include="Views\Platform\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Developer\" />
-    <Folder Include="Views\Game\" />
-    <Folder Include="Views\Platform\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

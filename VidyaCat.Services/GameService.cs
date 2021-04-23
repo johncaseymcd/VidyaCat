@@ -45,6 +45,7 @@ namespace VidyaCat.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
+
                 var query =
                     ctx.Games
                     .Select(
@@ -54,7 +55,7 @@ namespace VidyaCat.Services
                             GameID = g.GameID,
                             Title = g.Title,
                             ReleaseDate = g.ReleaseDate,
-                            Genre = Enum.GetName(typeof(Genre), g.Genre.GetHashCode()),
+                            Genre = g.Genre.ToString(),
                             DeveloperName = g.Developer.DeveloperName,
                             Platforms = g.Platforms.ToString()
                         }
