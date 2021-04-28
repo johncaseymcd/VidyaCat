@@ -106,6 +106,10 @@
     <Compile Include="Migrations\202104180047501_RoleUpdate.designer.cs">
       <DependentUpon>202104180047501_RoleUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104272149036_Seeding.cs" />
+    <Compile Include="Migrations\202104272149036_Seeding.designer.cs">
+      <DependentUpon>202104272149036_Seeding.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Platform.cs" />
     <Compile Include="Developer.cs" />
@@ -126,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104180047501_RoleUpdate.resx">
       <DependentUpon>202104180047501_RoleUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104272149036_Seeding.resx">
+      <DependentUpon>202104272149036_Seeding.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
