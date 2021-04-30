@@ -102,6 +102,10 @@
     <Compile Include="Migrations\202104300111039_MoreAzure.designer.cs">
       <DependentUpon>202104300111039_MoreAzure.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104300133137_Azure.cs" />
+    <Compile Include="Migrations\202104300133137_Azure.designer.cs">
+      <DependentUpon>202104300133137_Azure.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Platform.cs" />
     <Compile Include="Developer.cs" />
@@ -119,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104300111039_MoreAzure.resx">
       <DependentUpon>202104300111039_MoreAzure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104300133137_Azure.resx">
+      <DependentUpon>202104300133137_Azure.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
