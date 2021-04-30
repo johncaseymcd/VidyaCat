@@ -94,21 +94,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202104140024367_TestingMigrations.cs" />
-    <Compile Include="Migrations\202104140024367_TestingMigrations.designer.cs">
-      <DependentUpon>202104140024367_TestingMigrations.cs</DependentUpon>
+    <Compile Include="Migrations\202104300100185_AzureConnect.cs" />
+    <Compile Include="Migrations\202104300100185_AzureConnect.designer.cs">
+      <DependentUpon>202104300100185_AzureConnect.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104180019121_AddedUserRoles.cs" />
-    <Compile Include="Migrations\202104180019121_AddedUserRoles.designer.cs">
-      <DependentUpon>202104180019121_AddedUserRoles.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104180047501_RoleUpdate.cs" />
-    <Compile Include="Migrations\202104180047501_RoleUpdate.designer.cs">
-      <DependentUpon>202104180047501_RoleUpdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104272149036_Seeding.cs" />
-    <Compile Include="Migrations\202104272149036_Seeding.designer.cs">
-      <DependentUpon>202104272149036_Seeding.cs</DependentUpon>
+    <Compile Include="Migrations\202104300111039_MoreAzure.cs" />
+    <Compile Include="Migrations\202104300111039_MoreAzure.designer.cs">
+      <DependentUpon>202104300111039_MoreAzure.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Platform.cs" />
@@ -122,17 +114,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202104140024367_TestingMigrations.resx">
-      <DependentUpon>202104140024367_TestingMigrations.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202104300100185_AzureConnect.resx">
+      <DependentUpon>202104300100185_AzureConnect.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104180019121_AddedUserRoles.resx">
-      <DependentUpon>202104180019121_AddedUserRoles.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104180047501_RoleUpdate.resx">
-      <DependentUpon>202104180047501_RoleUpdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104272149036_Seeding.resx">
-      <DependentUpon>202104272149036_Seeding.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202104300111039_MoreAzure.resx">
+      <DependentUpon>202104300111039_MoreAzure.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

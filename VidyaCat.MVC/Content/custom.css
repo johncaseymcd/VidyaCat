@@ -40,7 +40,7 @@ h1{
     margin: auto;
     width: 100%;
     font-weight: bold;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.25em;
 }
 
 #sidebar{
@@ -48,7 +48,7 @@ h1{
 }
 
 .sidebarMenu{
-    display: inline;
+    display: block;
     list-style-type: none;
 }
 

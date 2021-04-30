@@ -34,17 +34,5 @@ namespace VidyaCat.Data
         public DbSet<Game> Games { get; set; }
         public DbSet<Developer> Developers { get; set; }
         public DbSet<Platform> Platforms { get; set; }
-
-       public class ApplicationRole : IdentityRole
-        {
-            public int UserDbID { get; set; }
-            public Guid UserID { get; set; }
-            public string Role { get; set; }
-            public string EmailAddress { get; set; }
-
-
-            public ApplicationRole() : base() { }
-            public ApplicationRole(string roleName) : base(roleName) { }
-        }
     }
 }

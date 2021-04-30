@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class RoleUpdate : DbMigration
+    public partial class MoreAzure : DbMigration
     {
         public override void Up()
         {

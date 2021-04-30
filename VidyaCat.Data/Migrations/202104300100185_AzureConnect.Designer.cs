@@ -7,13 +7,13 @@ namespace VidyaCat.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class AddedUserRoles : IMigrationMetadata
+    public sealed partial class AzureConnect : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedUserRoles));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AzureConnect));
         
         string IMigrationMetadata.Id
         {
-            get { return "202104180019121_AddedUserRoles"; }
+            get { return "202104300100185_AzureConnect"; }
         }
         
         string IMigrationMetadata.Source

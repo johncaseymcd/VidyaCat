@@ -7,13 +7,13 @@ namespace VidyaCat.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class Seeding : IMigrationMetadata
+    public sealed partial class MoreAzure : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Seeding));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(MoreAzure));
         
         string IMigrationMetadata.Id
         {
-            get { return "202104272149036_Seeding"; }
+            get { return "202104300111039_MoreAzure"; }
         }
         
         string IMigrationMetadata.Source
