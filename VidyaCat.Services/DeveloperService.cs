@@ -48,6 +48,7 @@ namespace VidyaCat.Services
                             DeveloperID = d.DeveloperID,
                             DeveloperName = d.DeveloperName,
                             Region = d.Region,
+                            IsMajor = d.IsMajor,
                             IsActive = d.IsActive
                         }
                     );
@@ -98,6 +99,7 @@ namespace VidyaCat.Services
                             DeveloperID = d.DeveloperID,
                             DeveloperName = d.DeveloperName,
                             Region = d.Region,
+                            IsMajor = d.IsMajor,
                             IsActive = d.IsActive
                         }
                     );
@@ -120,6 +122,7 @@ namespace VidyaCat.Services
                             DeveloperID = d.DeveloperID,
                             DeveloperName = d.DeveloperName,
                             Region = d.Region,
+                            IsMajor = d.IsMajor,
                             IsActive = d.IsActive
                         }
                     );
@@ -142,6 +145,7 @@ namespace VidyaCat.Services
                             DeveloperID = d.DeveloperID,
                             DeveloperName = d.DeveloperName,
                             Region = d.Region,
+                            IsMajor = d.IsMajor,
                             IsActive = d.IsActive
                         }
                     );

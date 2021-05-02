@@ -1,4 +1,4 @@
-﻿@model VidyaCat.Data.Developer
+﻿@model VidyaCat.Models.DeveloperModels.DeveloperDetail
 
 @{
     ViewBag.Title = "Details";
@@ -19,27 +19,33 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Region)
+            @Html.DisplayNameFor(model => model.RegionName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Region)
+            @Html.DisplayFor(model => model.RegionName)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.IsMajor)
+            @Html.DisplayNameFor(model => model.Type)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.IsMajor)
+            @Html.DisplayFor(model => model.Type)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.IsActive)
+            @Html.DisplayNameFor(model => model.Status)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.IsActive)
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GamesDeveloped)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GamesDeveloped)
         </dd>
 
     </dl>

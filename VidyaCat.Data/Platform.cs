@@ -44,8 +44,6 @@ namespace VidyaCat.Data
             {
                 return (DateTime.Now.Year - ReleaseDate.Year) <= 10;
             }
-
-            set { }
         }
 
         public string Status

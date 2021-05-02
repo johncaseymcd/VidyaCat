@@ -14,7 +14,38 @@ namespace VidyaCat.Models.DeveloperModels
         public string DeveloperName { get; set; }
         public Region Region { get; set; }
 
+        [Display(Name = "Region")]
+        public string RegionName
+        {
+            get
+            {
+                var name = Region.ToString().Replace('_', ' ');
+                return name;
+            }
+        }
+
+        [Display(Name = "Major Studio?")]
+        public bool IsMajor { get; set; }
+
         [Display(Name = "Currently Active?")]
         public bool IsActive { get; set; }
+
+        public string Type
+        {
+            get
+            {
+                if (!IsMajor) return "Indie";
+                return "Major";
+            }
+        }
+
+        public string Status
+        {
+            get
+            {
+                if (!IsActive) return "Inactive";
+                return "Active";
+            }
+        }
     }
 }

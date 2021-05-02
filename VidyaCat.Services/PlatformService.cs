@@ -64,7 +64,7 @@ namespace VidyaCat.Services
 
                 var games =
                     ctx.Games
-                    .Where(g => g.Platforms.Contains(entity))
+                    .Where(g => g.Platforms.Contains(entity.PlatformName))
                     .Select(g => g.Title);
 
                 return new PlatformDetail

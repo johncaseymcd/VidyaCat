@@ -1,4 +1,4 @@
-﻿@model IEnumerable<VidyaCat.Data.Developer>
+﻿@model IEnumerable<VidyaCat.Models.DeveloperModels.DeveloperListItem>
 
 @{
     ViewBag.Title = "Index";
@@ -15,13 +15,13 @@
             @Html.DisplayNameFor(model => model.DeveloperName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Region)
+            @Html.DisplayNameFor(model => model.RegionName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.IsMajor)
+            @Html.DisplayNameFor(model => model.Type)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.IsActive)
+            @Html.DisplayNameFor(model => model.Status)
         </th>
         <th></th>
     </tr>
@@ -32,13 +32,13 @@
             @Html.DisplayFor(modelItem => item.DeveloperName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Region)
+            @Html.DisplayFor(modelItem => item.RegionName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.IsMajor)
+            @Html.DisplayFor(modelItem => item.Type)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.IsActive)
+            @Html.DisplayFor(modelItem => item.Status)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.DeveloperID }) |

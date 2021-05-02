@@ -48,7 +48,7 @@ h1{
 }
 
 .sidebarMenu{
-    display: block;
+    display: inline-block;
     list-style-type: none;
 }
 

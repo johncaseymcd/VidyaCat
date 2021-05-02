@@ -106,6 +106,14 @@
     <Compile Include="Migrations\202104300133137_Azure.designer.cs">
       <DependentUpon>202104300133137_Azure.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105022203442_Seeding.cs" />
+    <Compile Include="Migrations\202105022203442_Seeding.designer.cs">
+      <DependentUpon>202105022203442_Seeding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105022309398_UpdateDev.cs" />
+    <Compile Include="Migrations\202105022309398_UpdateDev.designer.cs">
+      <DependentUpon>202105022309398_UpdateDev.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Platform.cs" />
     <Compile Include="Developer.cs" />
@@ -126,6 +134,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104300133137_Azure.resx">
       <DependentUpon>202104300133137_Azure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105022203442_Seeding.resx">
+      <DependentUpon>202105022203442_Seeding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105022309398_UpdateDev.resx">
+      <DependentUpon>202105022309398_UpdateDev.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

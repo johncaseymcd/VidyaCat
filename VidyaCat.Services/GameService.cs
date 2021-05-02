@@ -45,7 +45,6 @@ namespace VidyaCat.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-
                 var query =
                     ctx.Games
                     .Select(
@@ -120,7 +119,7 @@ namespace VidyaCat.Services
 
                 var query =
                     ctx.Games
-                    .Where(g => g.Platforms.Contains(platform))
+                    .Where(g => g.Platforms.Contains(platform.PlatformName))
                     .Select(
                         g =>
                         new GameListItem
@@ -193,13 +192,7 @@ namespace VidyaCat.Services
                     .Where(p => model.PlatformNames.Contains(p.PlatformName))
                     .Select(
                         p =>
-                        new Platform
-                        {
-                            PlatformID = p.PlatformID,
-                            Brand = p.Brand,
-                            PlatformName = p.PlatformName,
-                            ReleaseDate = p.ReleaseDate
-                        }
+                        p.PlatformName
                     );
 
                 var devEntity =
