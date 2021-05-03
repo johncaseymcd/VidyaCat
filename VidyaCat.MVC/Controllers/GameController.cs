@@ -54,26 +54,26 @@ namespace VidyaCat.MVC.Controllers
         }
 
         // GET: Games by Developer
-        public ActionResult IndexByDeveloper(string name)
+        public ActionResult IndexByDeveloper(string devName)
         {
             var svc = CreateGameService();
-            var model = svc.GetGamesByDeveloper(name);
+            var model = svc.GetGamesByDeveloper(devName);
             return View(model);
         }
 
         // GET: Games by Platform
-        public ActionResult IndexByPlatform(int id)
+        public ActionResult IndexByPlatform(string platName)
         {
             var svc = CreateGameService();
-            var model = svc.GetGamesByPlatform(id);
+            var model = svc.GetGamesByPlatform(platName);
             return View(model);
         }
 
         // GET: Games By Year
-        public ActionResult IndexByReleaseYear(DateTime releaseDate)
+        public ActionResult IndexByReleaseYear(int releaseYear)
         {
             var svc = CreateGameService();
-            var model = svc.GetGamesByYear(releaseDate);
+            var model = svc.GetGamesByYear(releaseYear);
             return View(model);
         }
 
@@ -82,6 +82,14 @@ namespace VidyaCat.MVC.Controllers
         {
             var svc = CreateGameService();
             var model = svc.GetGamesByGenre(genre);
+            return View(model);
+        }
+
+        // GET: Games by Rating
+        public ActionResult IndexByRating(Rating rating)
+        {
+            var svc = CreateGameService();
+            var model = svc.GetGamesByRating(rating);
             return View(model);
         }
 

@@ -110,7 +110,7 @@
                 PlatformID = 1,
                 Brand = Brand.Atari,
                 PlatformName = "2600",
-                ReleaseDate = new DateTime(1977, 09, 11),
+                ReleaseDate = new DateTime(1977, 09, 11).Date
             });
 
             context.Platforms.AddOrUpdate<Platform>(new Platform
@@ -118,7 +118,7 @@
                 PlatformID = 2,
                 Brand = Brand.Nintendo,
                 PlatformName = "Nintendo Entertainment System",
-                ReleaseDate = new DateTime(1985, 10, 18)
+                ReleaseDate = new DateTime(1985, 10, 18).Date
             });
 
             context.Platforms.AddOrUpdate<Platform>(new Platform
@@ -126,7 +126,7 @@
                 PlatformID = 3,
                 Brand = Brand.Sega,
                 PlatformName = "Genesis",
-                ReleaseDate = new DateTime(1989, 08, 14)
+                ReleaseDate = new DateTime(1989, 08, 14).Date
             });
 
             context.Platforms.AddOrUpdate<Platform>(new Platform
@@ -134,7 +134,7 @@
                 PlatformID = 4,
                 Brand = Brand.Sony,
                 PlatformName = "PlayStation",
-                ReleaseDate = new DateTime(1995, 09, 09)
+                ReleaseDate = new DateTime(1995, 09, 09).Date
             });
 
             context.Platforms.AddOrUpdate<Platform>(new Platform
@@ -142,7 +142,7 @@
                 PlatformID = 5,
                 Brand = Brand.Microsoft,
                 PlatformName = "Xbox",
-                ReleaseDate = new DateTime(2001, 11, 15)
+                ReleaseDate = new DateTime(2001, 11, 15).Date
             });
 
             context.Platforms.AddOrUpdate<Platform>(new Platform
@@ -150,7 +150,7 @@
                 PlatformID = 6,
                 Brand = Brand.Phillips,
                 PlatformName = "CD-i",
-                ReleaseDate = new DateTime(1991, 12, 3)
+                ReleaseDate = new DateTime(1991, 12, 3).Date
             });
 
             context.Platforms.AddOrUpdate<Platform>(new Platform
@@ -158,7 +158,7 @@
                 PlatformID = 7,
                 Brand = Brand.NEC,
                 PlatformName = "TurboGrafx-16",
-                ReleaseDate = new DateTime(1989, 08, 29)
+                ReleaseDate = new DateTime(1989, 08, 29).Date
             });
 
             context.Platforms.AddOrUpdate<Platform>(new Platform
@@ -166,7 +166,7 @@
                 PlatformID = 8,
                 Brand = Brand.PC,
                 PlatformName = "PC",
-                ReleaseDate = new DateTime(1976, 01, 01)
+                ReleaseDate = new DateTime(1976, 01, 01).Date
             });
 
             context.Platforms.AddOrUpdate<Platform>(new Platform
@@ -174,7 +174,7 @@
                 PlatformID = 9,
                 Brand = Brand.Nintendo,
                 PlatformName = "Super Nintendo Entertainment System",
-                ReleaseDate = new DateTime(1991, 08, 23)
+                ReleaseDate = new DateTime(1991, 08, 23).Date
             });
 
             context.Platforms.AddOrUpdate<Platform>(new Platform
@@ -182,7 +182,7 @@
                 PlatformID = 10,
                 Brand = Brand.Sega,
                 PlatformName = "Saturn",
-                ReleaseDate = new DateTime(1995, 05, 11)
+                ReleaseDate = new DateTime(1995, 05, 11).Date
             });
 
             context.Platforms.AddOrUpdate<Platform>(new Platform
@@ -190,7 +190,7 @@
                 PlatformID = 11,
                 Brand = Brand.Sony,
                 PlatformName = "PlayStation2",
-                ReleaseDate = new DateTime(2000, 10, 26)
+                ReleaseDate = new DateTime(2000, 10, 26).Date
             });
 
             context.Platforms.AddOrUpdate<Platform>(new Platform
@@ -198,7 +198,7 @@
                 PlatformID = 12,
                 Brand = Brand.Nintendo,
                 PlatformName = "Nintendo 64",
-                ReleaseDate = new DateTime(1996, 09, 29)
+                ReleaseDate = new DateTime(1996, 09, 29).Date
             });
 
             context.Platforms.AddOrUpdate<Platform>(new Platform
@@ -206,7 +206,7 @@
                 PlatformID = 13,
                 Brand = Brand.Nintendo,
                 PlatformName = "GameCube",
-                ReleaseDate = new DateTime(2001, 11, 18)
+                ReleaseDate = new DateTime(2001, 11, 18).Date
             });
 
             context.Platforms.AddOrUpdate<Platform>(new Platform
@@ -214,7 +214,7 @@
                 PlatformID = 14,
                 Brand = Brand.Microsoft,
                 PlatformName = "Xbox 360",
-                ReleaseDate = new DateTime(2005, 11, 22)
+                ReleaseDate = new DateTime(2005, 11, 22).Date
             });
 
             context.Platforms.AddOrUpdate<Platform>(new Platform
@@ -222,7 +222,7 @@
                 PlatformID = 15,
                 Brand = Brand.Sony,
                 PlatformName = "PlayStation 3",
-                ReleaseDate = new DateTime(2006, 11, 17)
+                ReleaseDate = new DateTime(2006, 11, 17).Date
             });
 
             context.Platforms.AddOrUpdate<Platform>(new Platform
@@ -230,7 +230,7 @@
                 PlatformID = 16,
                 Brand = Brand.Nintendo,
                 PlatformName = "Wii",
-                ReleaseDate = new DateTime(2006, 11, 19)
+                ReleaseDate = new DateTime(2006, 11, 19).Date
             });
 
             context.Platforms.AddOrUpdate<Platform>(new Platform
@@ -238,7 +238,7 @@
                 PlatformID = 17,
                 Brand = Brand.Nintendo,
                 PlatformName = "Wii U",
-                ReleaseDate = new DateTime(2021, 11, 18)
+                ReleaseDate = new DateTime(2012, 11, 18).Date
             });
 
             context.Platforms.AddOrUpdate<Platform>(new Platform
@@ -246,7 +246,7 @@
                 PlatformID = 18,
                 Brand = Brand.Sony,
                 PlatformName = "PlayStation 4",
-                ReleaseDate = new DateTime(2013, 11, 15)
+                ReleaseDate = new DateTime(2013, 11, 15).Date
             });
 
             context.Platforms.AddOrUpdate<Platform>(new Platform
@@ -254,7 +254,7 @@
                 PlatformID = 19,
                 Brand = Brand.Microsoft,
                 PlatformName = "Xbox One",
-                ReleaseDate = new DateTime(2013, 11, 22)
+                ReleaseDate = new DateTime(2013, 11, 22).Date
             });
 
             context.Platforms.AddOrUpdate<Platform>(new Platform
@@ -262,7 +262,7 @@
                 PlatformID = 20,
                 Brand = Brand.Nintendo,
                 PlatformName = "Switch",
-                ReleaseDate = new DateTime(2017, 03, 03)
+                ReleaseDate = new DateTime(2017, 03, 03).Date
             });
 
             context.Games.AddOrUpdate<Game>(new Game
@@ -270,10 +270,11 @@
                 GameID = 1,
                 Title = "Super Mario World",
                 DeveloperID = 1,
-                ReleaseDate = new DateTime(1990, 11, 21),
+                ReleaseDate = new DateTime(1990, 11, 21).Date,
                 Genre = Genre.Platformer,
                 FirstSubgenre = Subgenre.TwoD,
                 SecondSubgenre = Subgenre.Sixteen_Bit,
+                Rating = Data.Rating.E,
                 Platforms = new List<string>() { context.Platforms.Find(9).PlatformName}
             });
 
@@ -282,9 +283,10 @@
                 GameID = 2,
                 Title = "Crash Bandicoot",
                 DeveloperID = 2,
-                ReleaseDate = new DateTime(1996, 09, 09),
+                ReleaseDate = new DateTime(1996, 09, 09).Date,
                 Genre = Genre.Platformer,
                 FirstSubgenre = Subgenre.ThreeD,
+                Rating = Data.Rating.KA,
                 Platforms = new List<string>() { context.Platforms.Find(4).PlatformName }
             });
 
@@ -293,11 +295,12 @@
                 GameID = 3,
                 Title = "Hyper Light Drifter",
                 DeveloperID = 3,
-                ReleaseDate = new DateTime(2016, 03, 31),
+                ReleaseDate = new DateTime(2016, 03, 31).Date,
                 Genre = Genre.Adventure,
                 FirstSubgenre = Subgenre.TwoD,
                 SecondSubgenre = Subgenre.Sixteen_Bit,
                 ThirdSubgenre = Subgenre.Indie,
+                Rating = Data.Rating.T,
                 Platforms = new List<string>()
                 {
                     context.Platforms.Find(8).PlatformName,
@@ -312,11 +315,12 @@
                 GameID = 4,
                 Title = "The Talos Principle",
                 DeveloperID = 4,
-                ReleaseDate = new DateTime(2014,12,11),
+                ReleaseDate = new DateTime(2014, 12, 11).Date,
                 Genre = Genre.Puzzle,
                 FirstSubgenre = Subgenre.Open_World,
                 SecondSubgenre = Subgenre.Post_Apocalyptic,
                 ThirdSubgenre = Subgenre.ThreeD,
+                Rating = Data.Rating.E,
                 Platforms = new List<string>()
                 {
                     context.Platforms.Find(8).PlatformName,
@@ -331,10 +335,11 @@
                 GameID = 5,
                 Title = "L.A. Noire",
                 DeveloperID = 5,
-                ReleaseDate = new DateTime(2011, 05, 17),
+                ReleaseDate = new DateTime(2011, 05, 17).Date,
                 Genre = Genre.Adventure,
                 FirstSubgenre = Subgenre.Open_World,
                 SecondSubgenre = Subgenre.Third_Person,
+                Rating = Data.Rating.M,
                 Platforms = new List<string>()
                 {
                     context.Platforms.Find(8).PlatformName,
@@ -351,7 +356,7 @@
                 GameID = 6,
                 Title = "Streets Of Rage",
                 DeveloperID = 6,
-                ReleaseDate = new DateTime(1991, 09, 18),
+                ReleaseDate = new DateTime(1991, 09, 18).Date,
                 Genre = Genre.Action,
                 FirstSubgenre = Subgenre.Beat_Em_Up,
                 SecondSubgenre = Subgenre.TwoD,
@@ -364,9 +369,10 @@
                 GameID = 7,
                 Title = "Gran Turismo 4",
                 DeveloperID = 7,
-                ReleaseDate = new DateTime(2005, 02, 22),
+                ReleaseDate = new DateTime(2005, 02, 22).Date,
                 Genre = Genre.Racing,
                 FirstSubgenre = Subgenre.Multiplayer,
+                Rating = Data.Rating.E,
                 Platforms = new List<string>() { context.Platforms.Find(11).PlatformName }
             });
 
@@ -375,11 +381,12 @@
                 GameID = 8,
                 Title = "The Witcher",
                 DeveloperID = 8,
-                ReleaseDate = new DateTime(2007, 10, 30),
+                ReleaseDate = new DateTime(2007, 10, 30).Date,
                 Genre = Genre.RPG,
                 FirstSubgenre = Subgenre.Real_Time,
                 SecondSubgenre = Subgenre.Third_Person,
                 ThirdSubgenre = Subgenre.Fantasy,
+                Rating = Data.Rating.M,
                 Platforms = new List<string>() { context.Platforms.Find(8).PlatformName }
             });
 
@@ -388,11 +395,12 @@
                 GameID = 9,
                 Title = "Earthbound (Mother 2)",
                 DeveloperID = 9,
-                ReleaseDate = new DateTime(1995, 06, 05),
+                ReleaseDate = new DateTime(1995, 06, 05).Date,
                 Genre = Genre.RPG,
                 FirstSubgenre = Subgenre.Turn_Based,
                 SecondSubgenre = Subgenre.Sixteen_Bit,
                 ThirdSubgenre = Subgenre.JRPG,
+                Rating = Data.Rating.KA,
                 Platforms = new List<string>() { context.Platforms.Find(9).PlatformName }
             });
 
@@ -401,11 +409,12 @@
                 GameID = 10,
                 Title = "Darkest Dungeon",
                 DeveloperID = 10,
-                ReleaseDate = new DateTime(2016, 01, 19),
+                ReleaseDate = new DateTime(2016, 01, 19).Date,
                 Genre = Genre.RPG,
                 FirstSubgenre = Subgenre.Turn_Based,
                 SecondSubgenre = Subgenre.Art,
                 ThirdSubgenre = Subgenre.TwoD,
+                Rating = Data.Rating.T,
                 Platforms = new List<string>()
                 {
                     context.Platforms.Find(8).PlatformName,

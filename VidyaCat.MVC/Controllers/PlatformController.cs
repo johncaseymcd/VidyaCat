@@ -55,10 +55,10 @@ namespace VidyaCat.MVC.Controllers
         }
 
         // GET: Platforms by Year
-        public ActionResult IndexByYear(DateTime releaseDate)
+        public ActionResult IndexByYear(int releaseYear)
         {
             var svc = CreatePlatformService();
-            var model = svc.GetPlatformsByYear(releaseDate);
+            var model = svc.GetPlatformsByYear(releaseYear);
             return View(model);
         }
 

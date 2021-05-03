@@ -66,7 +66,7 @@ namespace VidyaCat.Services
                             GameID = g.GameID,
                             Title = g.Title,
                             ReleaseDate = g.ReleaseDate,
-                            Genre = g.Genre.ToString(),
+                            Genre = g.Genre,
                             Rating = g.Rating,
                             DeveloperName = g.Developer.DeveloperName
                         }
@@ -114,7 +114,7 @@ namespace VidyaCat.Services
                             GameID = g.GameID,
                             Title = g.Title,
                             ReleaseDate = g.ReleaseDate,
-                            Genre = g.Genre.ToString(),
+                            Genre = g.Genre,
                             Rating = g.Rating,
                             DeveloperName = g.Developer.DeveloperName
                         }
@@ -124,15 +124,13 @@ namespace VidyaCat.Services
             }
         }
 
-        public IEnumerable<GameListItem> GetGamesByPlatform(int platID)
+        public IEnumerable<GameListItem> GetGamesByPlatform(string platName)
         {
             using (var ctx = new ApplicationDbContext())
-            {
-                var platform = ctx.Platforms.Find(platID);
-
+            { 
                 var query =
                     ctx.Games
-                    .Where(g => g.Platforms.Contains(platform.PlatformName))
+                    .Where(g => g.Platforms.Contains(platName))
                     .Select(
                         g =>
                         new GameListItem
@@ -140,7 +138,7 @@ namespace VidyaCat.Services
                             GameID = g.GameID,
                             Title = g.Title,
                             ReleaseDate = g.ReleaseDate,
-                            Genre = g.Genre.ToString(),
+                            Genre = g.Genre,
                             Rating = g.Rating,
                             DeveloperName = g.Developer.DeveloperName
                         }
@@ -150,13 +148,13 @@ namespace VidyaCat.Services
             }
         }
 
-        public IEnumerable<GameListItem> GetGamesByYear(DateTime year)
+        public IEnumerable<GameListItem> GetGamesByYear(int year)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx.Games
-                    .Where(g => g.ReleaseDate.Year == year.Year)
+                    .Where(g => g.ReleaseDate.Year == year)
                     .Select(
                        g =>
                        new GameListItem
@@ -164,7 +162,7 @@ namespace VidyaCat.Services
                            GameID = g.GameID,
                            Title = g.Title,
                            ReleaseDate = g.ReleaseDate,
-                           Genre = g.Genre.ToString(),
+                           Genre = g.Genre,
                            Rating = g.Rating,
                            DeveloperName = g.Developer.DeveloperName
                        }
@@ -188,7 +186,31 @@ namespace VidyaCat.Services
                             GameID = g.GameID,
                             Title = g.Title,
                             ReleaseDate = g.ReleaseDate,
-                            Genre = g.Genre.ToString(),
+                            Genre = g.Genre,
+                            Rating = g.Rating,
+                            DeveloperName = g.Developer.DeveloperName
+                        }
+                    );
+
+                return query.ToList();
+            }
+        }
+
+        public IEnumerable<GameListItem> GetGamesByRating(Rating rating)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx.Games
+                    .Where(g => g.Rating == rating)
+                    .Select(
+                        g =>
+                        new GameListItem
+                        {
+                            GameID = g.GameID,
+                            Title = g.Title,
+                            ReleaseDate = g.ReleaseDate,
+                            Genre = g.Genre,
                             Rating = g.Rating,
                             DeveloperName = g.Developer.DeveloperName
                         }

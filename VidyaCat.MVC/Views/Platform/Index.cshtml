@@ -1,4 +1,4 @@
-﻿@model IEnumerable<VidyaCat.Data.Platform>
+﻿@model IEnumerable<VidyaCat.Models.PlatformModels.PlatformListItem>
 
 @{
     ViewBag.Title = "Index";
@@ -21,7 +21,7 @@
             @Html.DisplayNameFor(model => model.ReleaseDate)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.IsCurrent)
+            @Html.DisplayNameFor(model => model.Status)
         </th>
         <th></th>
     </tr>
@@ -29,16 +29,16 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Brand)
+            @Html.ActionLink($"{item.Brand}", "IndexByBrand", "Platform", new { brand = item.Brand }, htmlAttributes: new { @class = "indexLink" })
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.PlatformName)
+            @Html.ActionLink($"{item.PlatformName}", "Details", "Platform", new { id = item.PlatformID }, htmlAttributes: new { @class = "indexLink" })
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ReleaseDate)
+            @Html.ActionLink($"{item.ReleaseDate.Date}", "IndexByYear", "Platform", new { releaseYear = item.ReleaseDate.Year }, htmlAttributes: new { @class = "indexLink" })
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.IsCurrent)
+            @Html.ActionLink($"{item.Status}", "IndexByStatus", "Platform", new { status = item.Status }, htmlAttributes: new { @class = "indexLink" })
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.PlatformID }) |

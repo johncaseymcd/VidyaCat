@@ -15,7 +15,7 @@
             @Html.DisplayNameFor(model => model.DeveloperName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.RegionName)
+            @Html.DisplayNameFor(model => model.Region)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Type)
@@ -29,16 +29,16 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.DeveloperName)
+            @Html.ActionLink($"{item.DeveloperName}", "Details", "Developer", new { id = item.DeveloperID }, htmlAttributes: new { @class = "indexLink" })
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.RegionName)
+            @Html.DisplayFor(modelItem => item.Region)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Type)
+            @Html.ActionLink($"{item.Type}", "IndexByType", "Developer", new { type = item.Type }, htmlAttributes: new { @class = "indexLink" })
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Status)
+            @Html.ActionLink($"{item.Status}", "IndexByStatus", "Developer", new { status = item.Status }, htmlAttributes: new { @class = "indexLink" })
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.DeveloperID }) |

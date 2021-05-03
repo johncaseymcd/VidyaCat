@@ -73,18 +73,18 @@ namespace VidyaCat.Services
                     Brand = entity.Brand,
                     PlatformName = entity.PlatformName,
                     ReleaseDate = entity.ReleaseDate,
-                    GamesOnPlatform = games.ToList()
+                    GamesOnPlatform = games.ToList().Count
                 };
             }
         }
 
-        public IEnumerable<PlatformListItem> GetPlatformsByYear(DateTime year)
+        public IEnumerable<PlatformListItem> GetPlatformsByYear(int year)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx.Platforms
-                    .Where(p => p.ReleaseDate.Year == year.Year)
+                    .Where(p => p.ReleaseDate.Year == year)
                     .Select(
                         p =>
                         new PlatformListItem

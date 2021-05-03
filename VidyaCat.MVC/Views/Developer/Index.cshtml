@@ -15,7 +15,7 @@
             @Html.DisplayNameFor(model => model.DeveloperName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.RegionName)
+            @Html.DisplayNameFor(model => model.Region)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Type)
@@ -32,13 +32,13 @@
             @Html.ActionLink($"{item.DeveloperName}", "IndexByDeveloper", "Game", new { id = item.DeveloperID }, htmlAttributes: new { @class = "indexLink" })
         </td>
         <td>
-            @Html.ActionLink($"{item.RegionName}", "IndexByRegion", "Developer", new { id = item.Region }, htmlAttributes: new { @class = "indexLink" })
+            @Html.ActionLink($"{item.Region}", "IndexByRegion", "Developer", new { region = item.Region }, htmlAttributes: new { @class = "indexLink" })
         </td>
         <td>
-            @Html.ActionLink($"{item.Type}", "IndexByType", "Developer", new { id = item.IsMajor }, htmlAttributes: new { @class = "indexLink" })
+            @Html.ActionLink($"{item.Type}", "IndexByType", "Developer", new { type = item.Type }, htmlAttributes: new { @class = "indexLink" })
         </td>
         <td>
-            @Html.ActionLink($"{item.Status}", "IndexByStatus", "Developer", new { id = item.IsActive }, htmlAttributes: new { @class = "indexLink" })
+            @Html.ActionLink($"{item.Status}", "IndexByStatus", "Developer", new { status = item.Status }, htmlAttributes: new { @class = "indexLink" })
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.DeveloperID }) |

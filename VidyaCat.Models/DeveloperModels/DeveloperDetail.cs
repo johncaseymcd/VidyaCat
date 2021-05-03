@@ -33,7 +33,7 @@ namespace VidyaCat.Models.DeveloperModels
         {
             get
             {
-                if (!IsActive) return "Inactive";
+                if (!IsActive) return "Defunct";
                 return "Active";
             }
         }

@@ -15,7 +15,7 @@
             @Html.DisplayNameFor(model => model.DeveloperName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.RegionName)
+            @Html.DisplayNameFor(model => model.Region)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Type)
@@ -30,13 +30,13 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.DeveloperName)
+                @Html.ActionLink($"{item.DeveloperName}", "Details", "Developer", new { id = item.DeveloperID }, htmlAttributes: new { @class = "indexLink" })
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.RegionName)
+                @Html.ActionLink($"{item.Region}", "IndexByRegion", "Developer", new { region = item.Region }, htmlAttributes: new { @class = "indexLink" })
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Type)
+                @Html.ActionLink($"{item.Type}", "IndexByType", "Developer", new { type = item.Type }, htmlAttributes: new { @class = "indexLink" })
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Status)

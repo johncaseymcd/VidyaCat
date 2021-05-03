@@ -409,6 +409,7 @@
     <Content Include="Views\Platform\Delete.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\DateTime.cshtml" />
     <Content Include="Views\Game\Create.cshtml" />
+    <Content Include="Views\Game\IndexByRating.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

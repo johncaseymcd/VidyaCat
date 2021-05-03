@@ -118,6 +118,10 @@
     <Compile Include="Migrations\202105030205437_GameFix.designer.cs">
       <DependentUpon>202105030205437_GameFix.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105030428106_Rating.cs" />
+    <Compile Include="Migrations\202105030428106_Rating.designer.cs">
+      <DependentUpon>202105030428106_Rating.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Platform.cs" />
     <Compile Include="Developer.cs" />
@@ -147,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105030205437_GameFix.resx">
       <DependentUpon>202105030205437_GameFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105030428106_Rating.resx">
+      <DependentUpon>202105030428106_Rating.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

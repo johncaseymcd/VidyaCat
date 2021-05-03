@@ -42,7 +42,7 @@ namespace VidyaCat.Data
         {
             get
             {
-                return (DateTime.Now.Year - ReleaseDate.Year) <= 10;
+                return (DateTime.Now.Year - ReleaseDate.Year) <= 7;
             }
         }
 

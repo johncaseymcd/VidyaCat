@@ -1,0 +1,58 @@
+﻿@model IEnumerable<VidyaCat.Models.GameModels.GameListItem>
+
+@{
+    ViewBag.Title = "IndexByRating";
+}
+
+<h2>IndexByRating</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReleaseDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Genre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeveloperName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink($"{item.Title}", "Details", "Game", new { id = item.GameID }, htmlAttributes: new { @class = "indexLink" })
+            </td>
+            <td>
+                @Html.ActionLink($"{item.ReleaseDate.Date}", "IndexByReleaseYear", "Game", new { releaseYear = item.ReleaseDate.Year }, htmlAttributes: new { @class = "indexLink" })
+            </td>
+            <td>
+                @Html.ActionLink($"{item.Genre}", "IndexByGenre", "Game", new { genre = item.Genre }, htmlAttributes: new { @class = "indexLink" })
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+            <td>
+                @Html.ActionLink($"{item.DeveloperName}", "Details", "Developer", new { devName = item.DeveloperName }, htmlAttributes: new { @class = "indexLink" })
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.GameID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.GameID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.GameID })
+            </td>
+        </tr>
+    }
+
+</table>
