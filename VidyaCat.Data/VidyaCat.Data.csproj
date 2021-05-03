@@ -114,6 +114,10 @@
     <Compile Include="Migrations\202105022309398_UpdateDev.designer.cs">
       <DependentUpon>202105022309398_UpdateDev.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105030205437_GameFix.cs" />
+    <Compile Include="Migrations\202105030205437_GameFix.designer.cs">
+      <DependentUpon>202105030205437_GameFix.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Platform.cs" />
     <Compile Include="Developer.cs" />
@@ -140,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105022309398_UpdateDev.resx">
       <DependentUpon>202105022309398_UpdateDev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105030205437_GameFix.resx">
+      <DependentUpon>202105030205437_GameFix.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

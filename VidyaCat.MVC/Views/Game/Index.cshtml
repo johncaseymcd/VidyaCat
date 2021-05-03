@@ -1,4 +1,4 @@
-﻿@model IEnumerable<VidyaCat.Data.Game>
+﻿@model IEnumerable<VidyaCat.Models.GameModels.GameListItem>
 
 @{
     ViewBag.Title = "Index";
@@ -21,7 +21,7 @@
             @Html.DisplayNameFor(model => model.Genre)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Developer.DeveloperName)
+            @Html.DisplayNameFor(model => model.DeveloperName)
         </th>
         <th></th>
     </tr>
@@ -29,16 +29,16 @@
 @foreach (var item in Model) {
 <tr>
     <td>
-        @Html.DisplayFor(modelItem => item.Title)
+        @Html.ActionLink($"{item.Title}", "Details", "Game", new { id = item.GameID }, htmlAttributes: new { @class = "indexLink" })
     </td>
     <td>
-        @Html.DisplayFor(modelItem => item.ReleaseDate)
+        @Html.ActionLink($"{item.ReleaseDate}", "IndexByYear", "Game", new { id = item.ReleaseDate }, htmlAttributes: new { @class = "indexLink" })
     </td>
     <td>
-        @Html.DisplayFor(modelItem => item.Genre)
+        @Html.ActionLink($"{item.Genre}", "IndexByGenre", "Game", new { id = item.Genre }, htmlAttributes: new { @class = "indexLink" })
     </td>
     <td>
-        @Html.DisplayFor(modelItem => item.Developer.DeveloperName)
+        @Html.ActionLink($"{item.DeveloperName}", "Details", "Developer", new {id = item.DeveloperName}, htmlAttributes: new { @class = "indexLink" })
     </td>
     <td>
         @Html.ActionLink("Edit", "Edit", new { id = item.GameID }) |

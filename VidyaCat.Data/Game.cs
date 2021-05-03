@@ -28,17 +28,24 @@ namespace VidyaCat.Data
 
     public enum Subgenre
     {
+        [Display(Name = "2D")]
         TwoD = 1,
+        [Display(Name = "3D")]
         ThreeD,
+        [Display(Name = "8-Bit")]
         Eight_Bit,
+        [Display(Name = "16-Bit")]
         Sixteen_Bit,
         Art,
         Baseball,
         Basketball,
+        [Display(Name = "Battle Royale")]
         Battle_Royale,
+        [Display(Name = "Beat 'Em Up")]
         Beat_Em_Up,
         Competitive,
         Fantasy,
+        [Display(Name = "First-Person")]
         First_Person,
         Fitness,
         Football,
@@ -49,16 +56,24 @@ namespace VidyaCat.Data
         Metroidvania,
         MMO,
         Multiplayer,
+        [Display(Name = "Open-World")]
         Open_World,
         Other,
+        [Display(Name = "Post-Apocalyptic")]
         Post_Apocalyptic,
+        [Display(Name = "Real-Time")]
         Real_Time,
         Roguelike,
         Sandbox,
+        [Display(Name = "Third-Person")]
         Third_Person,
+        [Display(Name = "Top-Down")]
         Top_Down,
+        [Display(Name = "Turn-Based")]
         Turn_Based,
+        [Display(Name = "Visual Novel")]
         Visual_Novel,
+        [Display(Name = "Walking Simulator")]
         Walking_Simulator
     }
 
@@ -67,6 +82,7 @@ namespace VidyaCat.Data
         EC = 1,
         E,
         KA,
+        [Display(Name = "E10")]
         ETen,
         T,
         M,
@@ -90,8 +106,9 @@ namespace VidyaCat.Data
         public Subgenre FirstSubgenre { get; set; }
         public Subgenre SecondSubgenre { get; set; }
         public Subgenre ThirdSubgenre { get; set; }
+        public Rating Rating { get; set; }
 
-        public virtual List<string> Platforms { get; set; } = new List<string>();
+        public List<string> Platforms { get; set; }
 
         [ForeignKey(nameof(Developer))]
         public int DeveloperID { get; set; }

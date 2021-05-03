@@ -14,16 +14,6 @@ namespace VidyaCat.Models.DeveloperModels
         public string DeveloperName { get; set; }
         public Region Region { get; set; }
 
-        [Display(Name = "Region")]
-        public string RegionName
-        {
-            get
-            {
-                var name = Region.ToString().Replace('_', ' ');
-                return name;
-            }
-        }
-
         [Display(Name = "Major Studio?")]
         public bool IsMajor { get; set; }
 

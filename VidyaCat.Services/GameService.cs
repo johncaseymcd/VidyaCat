@@ -23,18 +23,30 @@ namespace VidyaCat.Services
             var entity =
                 new Game()
                 {
-                    //UserID = _userID,
                     Title = model.Title,
-                    ReleaseDate = model.ReleaseYear,
+                    ReleaseDate = model.ReleaseDate,
                     Genre = model.Genre,
                     FirstSubgenre = model.FirstSubgenre,
                     SecondSubgenre = model.SecondSubgenre,
-                    ThirdSubgenre = model.ThirdSubgenre
+                    ThirdSubgenre = model.ThirdSubgenre,
+                    Rating = model.Rating
                 };
 
             using (var ctx = new ApplicationDbContext())
             {
                 var dev = ctx.Developers.Single(d => d.DeveloperName == model.DeveloperName);
+                if (dev is null)
+                {
+                    dev = new Developer
+                    {
+                        DeveloperName = model.DeveloperName,
+                        Region = Region.Unknown,
+                        IsActive = true,
+                        IsMajor = false
+                    };
+                    ctx.Developers.Add(dev);
+                }
+
                 entity.DeveloperID = dev.DeveloperID;
                 ctx.Games.Add(entity);
                 return ctx.SaveChanges() == 1;
@@ -55,8 +67,8 @@ namespace VidyaCat.Services
                             Title = g.Title,
                             ReleaseDate = g.ReleaseDate,
                             Genre = g.Genre.ToString(),
-                            DeveloperName = g.Developer.DeveloperName,
-                            Platforms = g.Platforms.ToString()
+                            Rating = g.Rating,
+                            DeveloperName = g.Developer.DeveloperName
                         }
                     );
 
@@ -81,19 +93,20 @@ namespace VidyaCat.Services
                     FirstSubgenre = entity.FirstSubgenre,
                     SecondSubgenre = entity.SecondSubgenre,
                     ThirdSubgenre = entity.ThirdSubgenre,
+                    Rating = entity.Rating,
                     DeveloperName = entity.Developer.DeveloperName,
                     PlatformNames = entity.Platforms.ToString()
                 };
             }
         }
 
-        public IEnumerable<GameListItem> GetGamesByDeveloper(int devID)
+        public IEnumerable<GameListItem> GetGamesByDeveloper(string name)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx.Games
-                    .Where(g => g.DeveloperID == devID)
+                    .Where(g => g.Developer.DeveloperName == name)
                     .Select(
                         g =>
                         new GameListItem
@@ -101,9 +114,9 @@ namespace VidyaCat.Services
                             GameID = g.GameID,
                             Title = g.Title,
                             ReleaseDate = g.ReleaseDate,
-                            Genre = Enum.GetName(typeof(Genre), g.Genre.GetHashCode()),
-                            DeveloperName = g.Developer.DeveloperName,
-                            Platforms = g.Platforms.ToString()
+                            Genre = g.Genre.ToString(),
+                            Rating = g.Rating,
+                            DeveloperName = g.Developer.DeveloperName
                         }
                     );
 
@@ -127,7 +140,9 @@ namespace VidyaCat.Services
                             GameID = g.GameID,
                             Title = g.Title,
                             ReleaseDate = g.ReleaseDate,
-                            Genre = Enum.GetName(typeof(Genre), g.Genre.GetHashCode())
+                            Genre = g.Genre.ToString(),
+                            Rating = g.Rating,
+                            DeveloperName = g.Developer.DeveloperName
                         }
                     );
 
@@ -149,9 +164,9 @@ namespace VidyaCat.Services
                            GameID = g.GameID,
                            Title = g.Title,
                            ReleaseDate = g.ReleaseDate,
-                           Genre = Enum.GetName(typeof(Genre), g.Genre.GetHashCode()),
-                           DeveloperName = g.Developer.DeveloperName,
-                           Platforms = g.Platforms.ToString()
+                           Genre = g.Genre.ToString(),
+                           Rating = g.Rating,
+                           DeveloperName = g.Developer.DeveloperName
                        }
                     );
 
@@ -173,9 +188,9 @@ namespace VidyaCat.Services
                             GameID = g.GameID,
                             Title = g.Title,
                             ReleaseDate = g.ReleaseDate,
-                            Genre = Enum.GetName(typeof(Genre), g.Genre.GetHashCode()),
-                            DeveloperName = g.Developer.DeveloperName,
-                            Platforms = g.Platforms.ToString()
+                            Genre = g.Genre.ToString(),
+                            Rating = g.Rating,
+                            DeveloperName = g.Developer.DeveloperName
                         }
                     );
 
@@ -209,6 +224,7 @@ namespace VidyaCat.Services
                 entity.FirstSubgenre = model.FirstSubgenre;
                 entity.SecondSubgenre = model.SecondSubgenre;
                 entity.ThirdSubgenre = model.ThirdSubgenre;
+                entity.Rating = model.Rating;
                 entity.Platforms = platformQuery.ToList();
                 entity.DeveloperID = devEntity.DeveloperID;
 

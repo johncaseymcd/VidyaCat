@@ -16,6 +16,7 @@ namespace VidyaCat.Models.GameModels
         public Subgenre FirstSubgenre { get; set; }
         public Subgenre SecondSubgenre { get; set; }
         public Subgenre ThirdSubgenre { get; set; }
+        public Rating Rating { get; set; }
         public string PlatformNames { get; set; }
         public string DeveloperName { get; set; }
     }

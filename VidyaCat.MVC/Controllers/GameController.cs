@@ -54,18 +54,18 @@ namespace VidyaCat.MVC.Controllers
         }
 
         // GET: Games by Developer
-        public ActionResult IndexByDeveloper(int devID)
+        public ActionResult IndexByDeveloper(string name)
         {
             var svc = CreateGameService();
-            var model = svc.GetGamesByDeveloper(devID);
+            var model = svc.GetGamesByDeveloper(name);
             return View(model);
         }
 
         // GET: Games by Platform
-        public ActionResult IndexByPlatform(int platID)
+        public ActionResult IndexByPlatform(int id)
         {
             var svc = CreateGameService();
-            var model = svc.GetGamesByPlatform(platID);
+            var model = svc.GetGamesByPlatform(id);
             return View(model);
         }
 

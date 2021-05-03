@@ -1,4 +1,4 @@
-﻿@model IEnumerable<VidyaCat.Data.Game>
+﻿@model IEnumerable<VidyaCat.Models.GameModels.GameListItem>
 
 @{
     ViewBag.Title = "IndexByDeveloper";
@@ -20,6 +20,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Genre)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeveloperName)
+        </th>
         <th></th>
     </tr>
 
@@ -33,6 +36,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Genre)
+        </td>
+        <td>
+            @Html.ActionLink($"{item.DeveloperName}", "Details", "Developer", new { id = item.DeveloperName }, htmlAttributes: new { @class = "indexLink" })
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.GameID }) |

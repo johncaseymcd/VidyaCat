@@ -62,7 +62,7 @@ namespace VidyaCat.MVC.Controllers
         }
 
         // GET: Developers by Status   
-        public ActionResult IndexByStatus(string status)
+        public ActionResult IndexByStatus(bool status)
         {
             var svc = CreateDeveloperService();
             var model = svc.GetDevelopersByStatus(status);
@@ -70,7 +70,7 @@ namespace VidyaCat.MVC.Controllers
         }
 
         // GET: Developers by Type
-        public ActionResult IndexByType(string type)
+        public ActionResult IndexByType(bool type)
         {
             var svc = CreateDeveloperService();
             var model = svc.GetDevelopersByType(type);

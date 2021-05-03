@@ -15,7 +15,7 @@ namespace VidyaCat.Models.GameModels
         public string Title { get; set; }
 
         [Required]
-        public DateTime ReleaseYear { get; set; }
+        public DateTime ReleaseDate { get; set; }
 
         [Required]
         public Genre Genre { get; set; }
@@ -23,6 +23,8 @@ namespace VidyaCat.Models.GameModels
         public Subgenre FirstSubgenre { get; set; }
         public Subgenre SecondSubgenre { get; set; }
         public Subgenre ThirdSubgenre { get; set; }
+
+        public Rating Rating { get; set; }
 
         [Required]
         public string PlatformNames { get; set; }

@@ -13,7 +13,7 @@ namespace VidyaCat.Models.GameModels
         public string Title { get; set; }
         public DateTime ReleaseDate { get; set; }
         public string Genre { get; set; }
-        public string Platforms { get; set; }
+        public Rating Rating { get; set; }
         public string DeveloperName { get; set; }
     }
 }

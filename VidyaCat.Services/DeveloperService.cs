@@ -108,13 +108,13 @@ namespace VidyaCat.Services
             }
         }
 
-        public IEnumerable<DeveloperListItem> GetDevelopersByStatus(string status)
+        public IEnumerable<DeveloperListItem> GetDevelopersByStatus(bool status)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx.Developers
-                    .Where(g => g.Status == status)
+                    .Where(g => g.IsActive == status)
                     .Select(
                         d =>
                         new DeveloperListItem
@@ -131,13 +131,13 @@ namespace VidyaCat.Services
             }
         }
 
-        public IEnumerable<DeveloperListItem> GetDevelopersByType(string type)
+        public IEnumerable<DeveloperListItem> GetDevelopersByType(bool type)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx.Developers
-                    .Where(d => d.Type == type)
+                    .Where(d => d.IsMajor == type)
                     .Select(
                         d =>
                         new DeveloperListItem
